@@ -1,0 +1,6 @@
+.chord {
+    display: inline-block;
+    border: 2px solid #dddddd;
+    border-radius: 6px;
+    margin: 2px;
+}

@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ukulele Chord Finder</title>
+        <link href="libraries/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Ukulele Chord Finder</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="jumbotron">
+              <div class="container">
+       
+                <h3>What's That Chord?</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <p>
+                        Find an interesting chord on the ukulele but don't know what it is? 
+                        You can enter the fingering in the diagram on the right and look it up.
+                        </p>
+                        <p>
+                        Or you can look up chord by their key using the tabs below.
+                        </p>
+                    </div> 
+                    <div class="col-md-8">
+                        <div>Click the strings below to enter the finger pattern you want to look up</div>
+                        <div id="chordEdit" class="chord edit"></div>
+                    </div>                   
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+        <div>
+            <p>Look up chords by key</p>
+            <!-- Nav tabs -->
+            <ul id="chordTabs" class="nav nav-pills" role="tablist">
+                <li role="presentation" class="active"><a href="#All" aria-controls="All" role="tab" data-toggle="tab">All</a></li>
+                <li role="presentation"><a href="#AFlat" aria-controls="AFlat" role="tab" data-toggle="tab">A&#x266d;</a></li>
+                <li role="presentation"><a href="#A" aria-controls="A" role="tab" data-toggle="tab">A</a></li>
+                <li role="presentation"><a href="#BFlat" aria-controls="BFlat" role="tab" data-toggle="tab">B&#x266d;</a></li>
+                <li role="presentation"><a href="#B" aria-controls="B" role="tab" data-toggle="tab">B</a></li>
+                <li role="presentation"><a href="#C" aria-controls="C" role="tab" data-toggle="tab">C</a></li>
+                <li role="presentation"><a href="#DFlat" aria-controls="DFlat" role="tab" data-toggle="tab">D&#x266d;</a></li>
+                <li role="presentation"><a href="#D" aria-controls="D" role="tab" data-toggle="tab">D</a></li>
+                <li role="presentation"><a href="#EFlat" aria-controls="EFlat" role="tab" data-toggle="tab">E&#x266d;</a></li>
+                <li role="presentation"><a href="#E" aria-controls="E" role="tab" data-toggle="tab">E</a></li>
+                <li role="presentation"><a href="#F" aria-controls="F" role="tab" data-toggle="tab">F</a></li>
+                <li role="presentation"><a href="#GFlat" aria-controls="GFlat" role="tab" data-toggle="tab">G&#x266d;</a></li>
+                <li role="presentation"><a href="#G" aria-controls="G" role="tab" data-toggle="tab">G</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="All"></div>
+                <div role="tabpanel" class="tab-pane" id="AFlat"></div>
+                <div role="tabpanel" class="tab-pane" id="A"></div>
+                <div role="tabpanel" class="tab-pane" id="BFlat"></div>
+                <div role="tabpanel" class="tab-pane" id="B"></div>
+                <div role="tabpanel" class="tab-pane" id="C"></div>
+                <div role="tabpanel" class="tab-pane" id="DFlat"></div>
+                <div role="tabpanel" class="tab-pane" id="D"></div>
+                <div role="tabpanel" class="tab-pane" id="EFlat"></div>
+                <div role="tabpanel" class="tab-pane" id="E"></div>
+                <div role="tabpanel" class="tab-pane" id="F"></div>
+                <div role="tabpanel" class="tab-pane" id="GFlat"></div>
+                <div role="tabpanel" class="tab-pane" id="G"></div>
+            </div>
+
+            </div>
+        </div>
+        
+        <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+            <div class="container">
+              <p class="navbar-text small bottom" right=""><a href="http://wirelesswombat.com">© Tony Fardella 2015</a></p>
+            </div>
+        </nav>        
+
+        <script src="libraries/jquery-2.1.4.min.js"></script>
+        <script src="libraries/bootstrap/js/bootstrap.min.js"></script>
+        <script src="libraries/raphael-min.js"></script>
+        <script src="scripts/ukechords.js"></script>
+        <script src="scripts/chord.js"></script>
+        <script src="scripts/main.js"></script>
+    </body>
+</html>
