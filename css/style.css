@@ -3,4 +3,41 @@
     border: 2px solid #dddddd;
     border-radius: 6px;
     margin: 2px;
+	padding: 1px;
+	width: 80px;
+	height: 113px;
 }
+
+.chord.edit {
+	width: 120px;
+	height: 170px;
+}
+
+.clickable {
+	cursor: pointer;
+}
+
+.caption {
+	font-size: 14px;
+	font-family: Georgia, serif;
+}
+
+.tooltip {
+	font-size: 12px;
+	fill: black;
+	visibility: hidden;
+}
+
+.tooltip_bg {
+	fill: white;
+	stroke: black;
+	stroke-width: 1;
+	opacity: 0.85;
+	visibility: hidden;
+}
+
+.string {
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
