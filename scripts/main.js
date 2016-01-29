@@ -2,22 +2,36 @@
  * Let's draw some uke chords!!
  */
 $( function() {
-	var chordEd = new Chord();
 	var clist = [];
-
-	// Draw editable chord
-	chordEd.config.chordWidth = 120;
-	chordEd.config.numStrings = 4;
-	chordEd.config.editable = true;
-	chordEd.drawChord( "chordEdit", { "name": null, "code":"10000" } );
-
 	var i = 0;
 
+	function drawEditableChord( chordData )
+	{
+		var chordEd = new Chord();
+		var cname = null, ccode = "10000";
+
+		if( chordData )
+		{
+			cname = chordData.name;
+			ccode = chordData.code;
+		}
+
+		// Draw editable chord
+		chordEd.config.chordWidth = 120;
+		chordEd.config.numStrings = 4;
+		chordEd.config.editable = true;
+		chordEd.drawChord( "chordEdit", { "name": cname, "code":ccode } );
+	}
 
 	function getChordsByKey( key )
 	{
 		var ch = new Chord();
 		return ch.lookupByKey( key );
+	}
+
+	var chordClickHandler = function( chordData, chord )
+	{
+		drawEditableChord( chordData );
 	}
 
 	function drawChords( el, list )
@@ -30,6 +44,7 @@ $( function() {
 			chord.config.chordWidth = 80;
 			chord.config.numStrings = 4;
 			chord.config.editable = false;
+			chord.config.chordClickHandler = chordClickHandler;
 
 			var id = "chord" + Date.now();
 			var csvg = $("<svg version='1.1' xmlns='http://www.w3.org/2000/svg' class='chord' />").attr( "id", id );
@@ -38,22 +53,18 @@ $( function() {
 		}
 	}
 
-	// Fill in the All tab on initial page load
-	clist = ukeChords;
-	drawChords( "#All", clist );
+	// Draw editable chord
+	drawEditableChord( );
+
+	// Fill in the AFlat tab on initial page load
+	drawChords( "#AFlat", getChordsByKey( "AFlat" ) );
 
 	// Handle tab selection event
 	$('#chordTabs a').on('shown.bs.tab', function (e) {
 		var key = e.target.hash.substring( 1 );
 		
-		if( key === "All" )
-		{
-			clist = ukeChords;
-		}
-		else
-		{
-			clist = getChordsByKey( key );
-		}
+		clist = getChordsByKey( key );
+
 		var el = '#' + key;
 		drawChords( el, clist );
 	});

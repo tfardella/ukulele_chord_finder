@@ -18,6 +18,7 @@ var Chord = function()
 	{
 		//Default values
 		"editable": false,
+		"chordClickHandler": null,
 		"chordWidth": 100,
 		"numStrings": 4,
 		"numFrets": 5
@@ -286,6 +287,24 @@ Chord.prototype.drawChord = function( elem, chordData )
 		ch = self.paper;
 	}
 
+	ch.clear();
+	
+	var chordClickHandler = function( evt )
+	{
+		if( self.config.chordClickHandler !== null )
+		{
+			self.config.chordClickHandler( self.chordData, self );
+		}
+	}
+
+	if( !editable )
+	{
+		if( self.config.chordClickHandler !== null )
+		{
+			ch.addClass( "clickable" );
+			ch.click( chordClickHandler );
+		}
+	}
 	
 	fretSpacing = self.fretSpacing = chordWidth * 0.2;
 	dotRadius = chordWidth * 0.04;
