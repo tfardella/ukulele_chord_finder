@@ -66,6 +66,7 @@ $( function() {
 		clist = getChordsByKey( key );
 
 		var el = '#' + key;
+		$( el ).empty();	// clear exiting content
 		drawChords( el, clist );
 	});
 });

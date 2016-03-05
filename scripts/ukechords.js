@@ -5,7 +5,7 @@
 */
 
 var ukeChords = [
-	{ "name": "A\u266D/G#", "code": "15343", "key":"AFlat" },
+	{ "name": "A\u266D/G\u266F", "code": "15343", "key":"AFlat" },
 	{ "name": "A\u266Dm", "code": "14342", "key":"AFlat" },
 	{ "name": "A\u266Daug", "code": "11003", "key":"AFlat" },
 	{ "name": "A\u266Ddim", "code": "11202", "key":"AFlat" },
@@ -47,7 +47,7 @@ var ukeChords = [
 	{ "name": "Asus4", "code": "12200", "key":"A" },
 	{ "name": "A7sus4", "code": "10200", "key":"A" },
 
-	{ "name": "B\u266D/A#", "code": "13211", "key":"BFlat" },
+	{ "name": "B\u266D/A\u266F", "code": "13211", "key":"BFlat" },
 	{ "name": "B\u266Dm", "code": "13111", "key":"BFlat" },
 	{ "name": "B\u266Daug", "code": "13221", "key":"BFlat" },
 	{ "name": "B\u266Ddim", "code": "13101", "key":"BFlat" },
@@ -95,7 +95,7 @@ var ukeChords = [
 	{ "name": "C7sus4", "code": "10011", "key":"C" },
 	{ "name": "C7+5", "code": "11001", "key":"C" },
 
-	{ "name": "D\u266D/C#", "code": "11114", "key":"DFlat" },
+	{ "name": "D\u266D/C\u266F", "code": "11114", "key":"DFlat" },
 	{ "name": "D\u266Dm", "code": "11444", "key":"DFlat" },
 	{ "name": "D\u266Daug", "code": "12110", "key":"DFlat" },
 	{ "name": "D\u266Ddim", "code": "10104", "key":"DFlat" },
@@ -123,7 +123,7 @@ var ukeChords = [
 	{ "name": "Dsus4", "code": "10230", "key":"D" },
 	{ "name": "D7sus4", "code": "12233", "key":"D" },
 	
-	{ "name": "E\u266D/D#", "code": "13331", "key":"EFlat" },
+	{ "name": "E\u266D/D\u266F", "code": "13331", "key":"EFlat" },
 	{ "name": "E\u266Dm", "code": "13321", "key":"EFlat" },
 	{ "name": "E\u266Daug", "code": "10332", "key":"EFlat" },
 	{ "name": "E\u266Dsus2", "code": "13311", "key":"EFlat" },
@@ -162,7 +162,7 @@ var ukeChords = [
 	{ "name": "Fm7(\u266D5)", "code": "11312", "key":"F" },
 	{ "name": "F", "code": "12010", "key":"F" },
 
-	{ "name": "G\u266D/F#", "code": "13121", "key":"GFlat" },
+	{ "name": "G\u266D/F\u266F", "code": "13121", "key":"GFlat" },
 	{ "name": "G\u266Dm", "code": "12120", "key":"GFlat" },
 	{ "name": "G\u266Daug", "code": "13221", "key":"GFlat" },
 	{ "name": "G\u266Ddim", "code": "12020", "key":"GFlat" },

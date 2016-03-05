@@ -41,3 +41,11 @@
 	padding-right: 3px;
 }
 
+.tab-pane {
+	overflow-y: scroll;
+	height: 240px;
+}
+
+footer .container {
+	padding-top: 1em;
+}
